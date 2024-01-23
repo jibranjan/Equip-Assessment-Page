@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://cdn-media-assets.socratease.co/equip/product/img/favicon.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Assessment Features | Equip</title>
+  </head>
+  <body class="font-['Inter']">
+    <div>
+      <header class="sticky top-0 shadow-md">
+        <nav class="bg-white border-gray-200 px-4 sm:px-3 lg:px-4 main-nav">
+          <div class="max-w-screen-xl mx-auto">
+            <div class="flex items-center h-16">
+              <button
+                data-collapse-toggle="mobile-menu-2"
+                type="button"
+                onclick="toggleSidebar();"
+                class="inline-flex items-center p-1 pl-0 text-sm text-gray-800 rounded-lg md:hidden mr-1 hover:bg-gray-100 hover:text-black mobile-item mobile-item__hamburger"
+                id="mobile-item__hamburger"
+                aria-controls="mobile-menu-2"
+                aria-expanded="false"
+              >
+                <span class="sr-only">Open main menu</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6 xs:w- xs:h- sm:w- sm:h- md:w- md:h- lg:w- lg:h-"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+                  />
+                </svg>
+              </button>
+              <div
+                class="flex items-center justify-start sm:items-stretch sm:justify-start"
+              >
+                <div
+                  class="flex-shrink-0 flex flex-col items-center text-blue-900"
+                >
+                  <a class="text-lg md:text-2xl logo-text" href="/">
+                    <img
+                      class="h-5 lg:h-7 w-auto"
+                      src="https://cdn-media-assets.socratease.co/equip/product/img/equip-logo.png"
+                      alt="Equip"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="flex items-center text-xs lg:text-base h-full text-blue-900 ml-2 sm:ml-4 lg:ml-10"
+                id="nav-account-btn"
+              >
+                <div class="md:mr-1 h-full uppercase">
+                  <div class="flex items-center gap-4 md:gap-5 h-full">
+                    <a href="/demo/test-types/" class="hidden lg:inline-block"
+                      >Test types</a
+                    >
+                    <a href="/demo/test-types/" class="inline-block lg:hidden"
+                      >Tests</a
+                    >
+                    <div
+                      id="eqp-skills-btn"
+                      class="hidden md:flex flex-row items-center cursor-pointer h-full"
+                    >
+                      <span>Skills</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 sm:h-4 sm:w-4 ml-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </div>
+                    <a href="/pricing/">Pricing</a>
+                    <div
+                      id="eqp-usecases-btn"
+                      class="hidden md:flex flex-row items-center cursor-pointer h-full"
+                    >
+                      <span>Use Cases</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 sm:h-4 sm:w-4 ml-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      id="eqp-resources-btn"
+                      class="hidden md:flex flex-row items-center cursor-pointer h-full"
+                    >
+                      <span>Resources</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 sm:h-4 sm:w-4 ml-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-center ml-auto">
+                <a
+                  class="ml-4 uppercase text-xs lg:text-sm tracking-widest text-blue-900 hidden md:inline-block"
+                  href="/account/login/?providers=linkedin%2Cgoogle"
+                  >Candidate Login</a
+                >
+                <a
+                  class="ml-2 xs:ml-4 px-2 py-1 md:px-4 md:py-3 lg:px-6 bg-blue-900 rounded-full uppercase text-xs lg:text-sm text-white tracking-widest hidden md:inline-block"
+                  href="/account/recruiter-onboarding/"
+                  >Recruiter<span class="ml-1 hidden xs:inline">Signup</span></a
+                >
+                <a
+                  class="ml-2 xs:ml-4 px-3 py-2 md:px-4 md:py-3 lg:px-6 bg-blue-900 rounded-full uppercase text-xs lg:text-sm text-white tracking-widest inline-block md:hidden"
+                  href="/account/login/"
+                  >Login</a
+                >
+              </div>
+
+              <div
+                class="lg:hidden fixed justify-between items-center w-full xs:w-52 sm:w-96 bg-white border-r mobile-item left-0 top-0 h-full z-50 -translate-x-full transition-all duration-300 ease-in-out"
+                id="mobile-menu-2"
+              >
+                <div class="flex items-center justify-between h-16 px-4">
+                  <div
+                    class="flex-1 flex items-center justify-start sm:items-stretch sm:justify-start"
+                  >
+                    <div
+                      class="flex-shrink-0 flex flex-col items-center pri-text-clr"
+                    >
+                      <a
+                        class="text-lg md:text-2xl logo-text text-black"
+                        href="/"
+                        >E Q U I P</a
+                      >
+                    </div>
+                  </div>
+
+                  <button
+                    data-collapse-toggle="mobile-menu-2"
+                    type="button"
+                    id="mobile-item__close"
+                    onclick="toggleSidebar()"
+                    class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 mobile-item mobile-item__hamburger"
+                    aria-controls="mobile-menu-2"
+                    aria-expanded="false"
+                    aria-label="Side Nav Menu"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 xs:w- xs:h- sm:w- sm:h- md:w- md:h- lg:w- lg:h-"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                </div>
+
+                <div
+                  class="grid sm:grid-cols-2 gap-x-6 px-4 h-5/6 overflow-auto"
+                >
+                  <div class="mb-8">
+                    <h3 class="text-sm font-medium leading-6 text-gray-500">
+                      USE CASES
+                    </h3>
+                    <div class="mt-2 flow-root">
+                      <div class="-my-2">
+                        <a
+                          href="/resources/technical-recruitment/"
+                          class="block py-1 text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Tech Hiring
+                        </a>
+                        <a
+                          href="/resources/non-technical-recruitment/"
+                          class="block py-1 text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Non-Tech Hiring
+                        </a>
+                        <a
+                          href="/resources/campus-hiring/"
+                          class="block py-1 text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Campus Hiring
+                        </a>
+                        <a
+                          href="/resources/online-tests-for-institutes/"
+                          class="block py-1 text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Assessing Students Online
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-8">
+                    <h3 class="text-sm font-medium leading-6 text-gray-500">
+                      SAMPLE DASHBOARDS
+                    </h3>
+                    <div class="mt-2 flow-root">
+                      <div class="-my-2">
+                        <a
+                          href="/demo/recruiter/home/"
+                          class="block py-1 text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Recruiter Dashboard
+                        </a>
+                        <a
+                          href="/demo/recruiter/assessments/pyt-demo/results"
+                          class="block py-1 text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Engineering Role
+                        </a>
+                        <a
+                          href="/demo/recruiter/assessments/bde-demo/results"
+                          class="block py-1 text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Business Development Role
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-8">
+                    <h3 class="text-sm font-medium leading-6 text-gray-500">
+                      MAIN FEATURES
+                    </h3>
+                    <div class="mt-2 flow-root">
+                      <div class="-my-2">
+                        <a
+                          href="/assessment-features"
+                          class="block py-1 text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Cool Features
+                        </a>
+                        <a
+                          href="/useful-features"
+                          class="block py-1 text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Useful Features
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-8">
+                    <h3 class="text-sm font-medium leading-6 text-gray-500">
+                      OTHERS
+                    </h3>
+                    <div class="mt-2 flow-root">
+                      <div class="-my-2">
+                        <a
+                          href="/resources/"
+                          class="block py-1 text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Resource center
+                        </a>
+                        <a
+                          href="/skills"
+                          class="block py-1 text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Skills
+                        </a>
+                        <a
+                          href="/faqs/"
+                          class="block py-1 text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          FAQs
+                        </a>
+                        <a
+                          href="https://equip.co/blog"
+                          class="block py-1 text-sm font-semibold leading-6 text-gray-900"
+                          target="_blank"
+                        >
+                          Blog
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-span-2">
+                    <a
+                      class="px-4 py-2 md:px-4 md:py-3 lg:px-6 sec-btn rounded-full uppercase text-sm tracking-widest inline-block w-fit"
+                      href="/account/recruiter-onboarding/"
+                      >Recruiter Signup</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <section id="hero" class="bg-blue-50">
+        <div class="max-w-7xl mx-auto py-8 flex flex-col gap-2.5">
+          <div class="h-10 px-5 md:px-0 flex justify-center md:justify-start">
+            <h1
+              class="text-blue-900 text-3xl font-bold leading-10 text-center md:text-left"
+            >
+              Our Coolest Assessment Features
+            </h1>
+          </div>
+          <div
+            class="hidden sm:flex h-7 px-5 md:px-0 justify-center md:justify-start"
+          >
+            <p
+              class="text-blue-900 self-stretch text-base font-normal leading-7 text-center md:text-left"
+            >
+              Equip is not just a quiz-taking platform. You can automatically
+              generate questions, assess candidate’s verbal communication and do
+              much more.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="max-w-7xl px-9 py-8"></section>
+
+      <section id="trusted-by-section" class="bg-gray-50 py-4">
+        <div class="flex justify-between max-w-7xl mx-auto">
+          <div id="trusted-by" class="flex items-center gap-0.5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="33"
+              height="32"
+              viewBox="0 0 33 32"
+              fill="none"
+            >
+              <g id="Shield check">
+                <path
+                  id="Icon"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M3.96578 7.9982C8.77901 7.9329 13.1645 6.09648 16.5 3.11108C19.8355 6.09648 24.221 7.9329 29.0342 7.9982C29.209 9.03944 29.3 10.1091 29.3 11.2C29.3 19.5598 23.9572 26.6717 16.5 29.3074C9.04278 26.6717 3.70001 19.5598 3.70001 11.2C3.70001 10.1091 3.79099 9.03944 3.96578 7.9982ZM22.0071 13.5071C22.3976 13.1165 22.3976 12.4834 22.0071 12.0928C21.6166 11.7023 20.9834 11.7023 20.5929 12.0928L14.9 17.7857L12.4071 15.2928C12.0166 14.9023 11.3834 14.9023 10.9929 15.2928C10.6024 15.6834 10.6024 16.3165 10.9929 16.7071L14.1929 19.9071C14.3804 20.0946 14.6348 20.2 14.9 20.2C15.1652 20.2 15.4196 20.0946 15.6071 19.9071L22.0071 13.5071Z"
+                  fill="#6B7280"
+                />
+              </g>
+            </svg>
+            <span
+              class="uppercase text-gray-500 text-base font-medium leading-normal"
+              >Trusted by</span
+            >
+          </div>
+          <div id="companies" class="flex gap-5 items-center">
+            <div class="company px-[5px] py-4 flex justify-center items-center">
+              <img
+                class="w-[136.71px] h-[37.45px]"
+                src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/codingal.png"
+                alt="codingal logo"
+              />
+            </div>
+            <div class="company px-2">
+              <img
+                class="w-[142.80px] h-[35.17px]"
+                src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/treebo.png"
+                alt="treebo logo"
+              />
+            </div>
+            <div class="company px-[5px]">
+              <img
+                class="w-[164.93px] h-[36.08px]"
+                src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/shadowfax.png"
+                alt="shadowfax logo"
+              />
+            </div>
+            <div class="company px-9">
+              <img
+                class="w-[95.57px] h-[40.96px]"
+                src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/antgroup.png"
+                alt="antgroup logo"
+              />
+            </div>
+            <div class="company px-4">
+              <img
+                class="w-[103.71px] h-[27.78px]"
+                src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/practo.png"
+                alt="practo logo"
+              />
+            </div>
+            <div class="company px-5">
+              <img
+                class="w-[95.87px] h-[30.93px]"
+                src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/1point1.png"
+                alt="1point1 logo"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="get-started-section" class="bg-blue-900">
+        <div
+          class="max-w-7xl mx-auto p-10 flex flex-col gap-4 items-center text-center"
+        >
+          <h3 class="text-3xl text-white font-bold leading-10">
+            Discover the Power of Effective Skills Testing Today!
+          </h3>
+          <p class="text-gray-50 text-lg font-normal leading-loose">
+            Get started with Equip and streamline your hiring process | No
+            credit card needed
+          </p>
+          <div class="flex gap-2">
+            <div>
+              <button
+                class="bg-emerald-500 py-3 px-6 rounded-full border border-blue-900"
+              >
+                <a
+                  href="#"
+                  class="text-white text-base font-semibold uppercase leading-normal tracking-tight"
+                >
+                  Signup Today!</a
+                >
+              </button>
+            </div>
+            <div class="flex flex-col gap-2">
+              <button
+                class="py-3 px-6 border-2 border-emerald-500 rounded-full"
+              >
+                <a
+                  href="#"
+                  class="text-emerald-500 text-base font-semibold uppercase leading-normal tracking-tight"
+                  >Sample Dashboard</a
+                >
+              </button>
+              <span class="text-gray-50 text-base font-normal leading-7"
+                >How our shortlisting works</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="flex flex-col flex-1 overflow-hidden footer-ctr bg-blue-900">
+      <footer class="relative px-5 py-9 font-medium text-gray-300 pri-col__bg">
+        <div
+          class="max-w-[1240px] mx-auto md:grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-y-8 gap-x-2 relative z-10"
+        >
+          <div class="col-span-2 sm:col-span-4 md:col-span-2">
+            <img
+              class="mt-0 h-7 md:h-9"
+              src="https://cdn-media-assets.socratease.co/equip/product/img/equip-logo-bw.png"
+              alt="Equip logo black and white"
+            />
+            <p class="mt-5">Online Skill Tests for Hiring</p>
+            <p class="mt-3 text-xs">
+              ©
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              2024 Socratease, Inc. All rights reserved.
+            </p>
+            <div class="mt-5 flex items-center gap-x-3">
+              <img
+                class="w-14"
+                src="https://cdn-media-assets.socratease.co/equip/product/img/users-love-us.svg"
+                alt="G2 users love us"
+              />
+              <img
+                class="w-14"
+                src="https://cdn-media-assets.socratease.co/equip/product/img/g2-high-performer-spring-23.svg"
+                alt="G2 high performer spring 2023"
+              />
+              <a
+                href="https://www.g2.com/products/socratease-inc-equip/reviews#reviews"
+                title="Read reviews of Equip on G2"
+                target="_blank"
+              >
+                <img
+                  class="w-full"
+                  style="max-width: 120px"
+                  alt="Read Equip reviews on G2"
+                  src="https://www.g2.com/products/socratease-inc-equip/widgets/stars?color=white&amp;type=read"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="w-full md:w-auto lg:w-44 md:space-y-3 mt-4 md:mt-0">
+            <p class="font-bold text-white mb-1">Equip</p>
+            <ul
+              class="md:space-y-3 grid grid-cols-2 sm:grid-cols-3 gap-y-2 gap-x-4 md:block max-w-md md:max-w-none mb-4"
+            >
+              <li
+                class="text-gray-200 hover:text-white transition-all text-sm md:text-base"
+              >
+                <a href="/useful-features/">Features</a>
+              </li>
+              <li
+                class="text-gray-200 hover:text-white transition-all text-sm md:text-base"
+              >
+                <a href="https://equip.co/blog/">Blog</a>
+              </li>
+              <li
+                class="text-gray-200 hover:text-white transition-all text-sm md:text-base"
+              >
+                <a href="/faqs/">FAQs</a>
+              </li>
+              <li
+                class="text-gray-200 hover:text-white transition-all text-sm md:text-base"
+              >
+                <a href="/pricing/">Pricing</a>
+              </li>
+              <li
+                class="text-gray-200 hover:text-white transition-all text-sm md:text-base"
+              >
+                <a
+                  href="https://equip.co/blog/ats-integration-equip-assessments-now-available-on-lever-cl5cd3o2z341331po7c5znxydw/"
+                  >Integrations</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="w-full md:w-auto lg:w-44 md:space-y-3">
+            <p class="font-bold text-white mb-1">Compare</p>
+            <ul
+              class="md:space-y-3 grid grid-cols-2 sm:grid-cols-3 gap-y-2 gap-x-4 md:block max-w-md md:max-w-none mb-4"
+            >
+              <li
+                class="text-gray-200 hover:text-white transition-all text-sm md:text-base"
+              >
+                <a href="/resources/alternative/?competitor=hackerrank"
+                  >Equip vs HackerRank</a
+                >
+              </li>
+              <li
+                class="text-gray-200 hover:text-white transition-all text-sm md:text-base"
+              >
+                <a href="/resources/alternative/?competitor=hackerearth"
+                  >Equip vs HackerEarth</a
+                >
+              </li>
+              <li
+                class="text-gray-200 hover:text-white transition-all text-sm md:text-base"
+              >
+                <a href="/resources/alternative/?competitor=testgorilla"
+                  >Equip vs TestGorilla</a
+                >
+              </li>
+              <li
+                class="text-gray-200 hover:text-white transition-all text-sm md:text-base"
+              >
+                <a href="/resources/alternative/?competitor=imocha"
+                  >Equip vs iMocha</a
+                >
+              </li>
+              <li
+                class="text-gray-200 hover:text-white transition-all text-sm md:text-base"
+              >
+                <a href="/resources/alternative/?competitor=mettl"
+                  >Equip vs Mettl</a
+                >
+              </li>
+              <li
+                class="text-gray-200 hover:text-white transition-all text-sm md:text-base"
+              >
+                <a
+                  href="/hackerrank-testgorilla-mettl-imocha-adaface-alternative/"
+                  >Why Equip Wins</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="w-full md:w-auto lg:w-44 md:space-y-3">
+            <p class="font-bold text-white mb-1">Legal</p>
+            <ul
+              class="md:space-y-3 grid grid-cols-2 sm:grid-cols-3 gap-y-2 gap-x-4 md:block max-w-md md:max-w-none mb-4"
+            >
+              <li
+                class="text-gray-200 hover:text-white transition-all text-sm md:text-base"
+              >
+                <a href="/terms-service/">Terms of Service</a>
+              </li>
+              <li
+                class="text-gray-200 hover:text-white transition-all text-sm md:text-base"
+              >
+                <a href="/privacy-policy/">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="w-full md:w-auto lg:w-44 md:space-y-3">
+            <p class="font-bold text-white mb-1">Contact</p>
+            <ul
+              class="md:space-y-3 grid grid-cols-2 sm:grid-cols-3 gap-y-2 gap-x-4 md:block max-w-md md:max-w-none mb-4"
+            >
+              <li>
+                <a href="mailto:hello@equip.co" class="text-white"
+                  >hello@equip.co</a
+                >
+              </li>
+              <li class="flex gap-2 items-center">
+                <a
+                  href="https://www.linkedin.com/company/equiphq/"
+                  target="_blank"
+                  ><img
+                    src="https://cdn-media-assets.socratease.co/equip/product/img/icons/ph_linkedin-logo.svg"
+                    alt="Equip's LinkedIn page"
+                /></a>
+                <a
+                  href="https://www.g2.com/products/socratease-inc-equip/reviews"
+                  target="_blank"
+                  ><img
+                    src="https://cdn-media-assets.socratease.co/equip/product/img/icons/g2-logo.svg"
+                    alt="Equip's G2 reviews page"
+                /></a>
+                <a href="https://twitter.com/get_equip" target="_blank"
+                  ><img
+                    src="https://cdn-media-assets.socratease.co/equip/product/img/icons/twitter-logo.svg"
+                    alt="Equip's Twitter profile page"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <img
+          class="absolute top-0 left-0 hidden md:block md:h-16"
+          src="https://cdn-media-assets.socratease.co/equip/product/img/Dot.svg"
+          alt=""
+        />
+        <img
+          class="md:hidden absolute top-14 right-0"
+          src="https://cdn-media-assets.socratease.co/equip/product/img/box-pattern-footer.svg"
+          alt=""
+        />
+        <img
+          class="hidden md:block absolute top-0 right-0"
+          src="https://cdn-media-assets.socratease.co/equip/product/img/box-pattern-footer-desktop.svg"
+          alt=""
+        />
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
