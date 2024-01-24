@@ -339,9 +339,9 @@
         </nav>
       </header>
 
-      <section id="hero" class="bg-blue-50">
-        <div class="max-w-7xl mx-auto py-8 flex flex-col gap-2.5">
-          <div class="h-10 px-5 md:px-0 flex justify-center md:justify-start">
+      <section id="hero" class="bg-blue-50 py-8 px-6 md:px-3 lg:px-4">
+        <div class="max-w-7xl mx-auto flex flex-col gap-2.5">
+          <div class="flex justify-center md:justify-start">
             <h1
               class="text-blue-900 text-3xl font-bold leading-10 text-center md:text-left"
             >
@@ -349,7 +349,7 @@
             </h1>
           </div>
           <div
-            class="hidden sm:flex h-7 px-5 md:px-0 justify-center md:justify-start"
+            class="hidden sm:flex px-5 md:px-0 justify-center md:justify-start"
           >
             <p
               class="text-blue-900 self-stretch text-base font-normal leading-7 text-center md:text-left"
@@ -369,7 +369,8 @@
             class="max-h-[911px] col-span-3 rounded-tl-3xl rounded-bl-3xl border border-zinc-300 overflow-y-auto"
           >
             <div
-              class="card p-5 border-l-4 rounded-t-3xl border-emerald-400 border-b border-b-zinc-300 flex flex-col gap-3"
+              id="card-gab"
+              class="hiw-card p-5 border-l-4 rounded-t-3xl border-emerald-400 border-b border-b-zinc-300 flex flex-col gap-3"
             >
               <div class="flex items-center gap-3">
                 <div>
@@ -406,7 +407,8 @@
               </div>
             </div>
             <div
-              class="card p-5 flex flex-col gap-3 bg-stone-50 border-b border-zinc-300 border-opacity"
+              id="card-code"
+              class="hiw-card text-neutral-400 p-5 flex flex-col gap-3 bg-stone-50 border-b border-zinc-300 border-opacity"
             >
               <div class="flex items-center gap-3">
                 <div>
@@ -430,22 +432,19 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-neutral-400 text-xl font-semibold leading-7">
-                    Code Runner
-                  </h3>
+                  <h3 class="text-xl font-semibold leading-7">Code Runner</h3>
                 </div>
               </div>
               <div>
-                <p
-                  class="text-neutral-400 text-base font-medium leading-normal"
-                >
+                <p class="text-base font-medium leading-normal">
                   Test a programmer's coding skills. User writes code in an IDE
                   and the code is automatically evaluated.
                 </p>
               </div>
             </div>
             <div
-              class="card p-5 flex flex-col gap-3 bg-stone-50 border-b border-zinc-300 border-opacity"
+              id="card-video"
+              class="hiw-card text-neutral-400 p-5 flex flex-col gap-3 bg-stone-50 border-b border-zinc-300 border-opacity"
             >
               <div class="flex items-center gap-3">
                 <div>
@@ -469,22 +468,21 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-neutral-400 text-xl font-semibold leading-7">
+                  <h3 class="text-xl font-semibold leading-7">
                     Interactive Video
                   </h3>
                 </div>
               </div>
               <div>
-                <p
-                  class="text-neutral-400 text-base font-medium leading-normal"
-                >
+                <p class="text-base font-medium leading-normal">
                   Want to ensure your users pay attention to videos? Make the
                   videos interactive by layering questions.
                 </p>
               </div>
             </div>
             <div
-              class="card p-5 flex flex-col gap-3 bg-stone-50 border-b border-zinc-300 border-opacity"
+              id="card-lucky"
+              class="hiw-card text-neutral-400 p-5 flex flex-col gap-3 bg-stone-50 border-b border-zinc-300 border-opacity"
             >
               <div class="flex items-center gap-3">
                 <div>
@@ -508,22 +506,21 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-neutral-400 text-xl font-semibold leading-7">
+                  <h3 class="text-xl font-semibold leading-7">
                     I'm Feeling Lucky
                   </h3>
                 </div>
               </div>
               <div>
-                <p
-                  class="text-neutral-400 text-base font-medium leading-normal"
-                >
+                <p class="text-base font-medium leading-normal">
                   Automagically generate different variants for the same
                   question, for different users. At scale.
                 </p>
               </div>
             </div>
             <div
-              class="card p-5 flex flex-col gap-3 bg-stone-50 border-b border-zinc-300 border-opacity"
+              id="card-doc"
+              class="hiw-card text-neutral-400 p-5 flex flex-col gap-3 bg-stone-50 border-b border-zinc-300 border-opacity"
             >
               <div class="flex items-center gap-3">
                 <div>
@@ -547,22 +544,21 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-neutral-400 text-xl font-semibold leading-7">
+                  <h3 class="text-xl font-semibold leading-7">
                     What's up, Doc?
                   </h3>
                 </div>
               </div>
               <div>
-                <p
-                  class="text-neutral-400 text-base font-medium leading-normal"
-                >
+                <p class="text-base font-medium leading-normal">
                   Upload a PDF and ask questions based on it. No more taking
                   screenshots and copy-pasting text.
                 </p>
               </div>
             </div>
             <div
-              class="card p-5 flex flex-col gap-3 bg-stone-50 border-b border-zinc-300 border-opacity"
+              id="card-tabs"
+              class="hiw-card text-neutral-400 p-5 flex flex-col gap-3 bg-stone-50 border-b border-zinc-300 border-opacity"
             >
               <div class="flex items-center gap-3">
                 <div>
@@ -584,22 +580,21 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-neutral-400 text-xl font-semibold leading-7">
+                  <h3 class="text-xl font-semibold leading-7">
                     Keep Close Tabs
                   </h3>
                 </div>
               </div>
               <div>
-                <p
-                  class="text-neutral-400 text-base font-medium leading-normal"
-                >
+                <p class="text-base font-medium leading-normal">
                   No more Googling an answer. Track the screen the test taker is
                   on and even record screenshots.
                 </p>
               </div>
             </div>
             <div
-              class="card p-5 flex flex-col gap-3 bg-stone-50 border-opacity"
+              id="card-pool"
+              class="hiw-card text-neutral-400 p-5 flex flex-col gap-3 bg-stone-50 border-opacity"
             >
               <div class="flex items-center gap-3">
                 <div>
@@ -633,15 +628,13 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-neutral-400 text-xl font-semibold leading-7">
+                  <h3 class="text-xl font-semibold leading-7">
                     Pool You Can't Fool
                   </h3>
                 </div>
               </div>
               <div>
-                <p
-                  class="text-neutral-400 text-base font-medium leading-normal"
-                >
+                <p class="text-base font-medium leading-normal">
                   Conducting a test with many simultaneous users? Group
                   similar-looking questions into a pool.
                 </p>
@@ -690,7 +683,7 @@
                 </g>
               </svg>
             </div>
-            <div class="flex flex-col gap-2">
+            <div id="card-gab-output" class="flex flex-col gap-2">
               <h3 class="text-neutral-600 text-3xl font-bold leading-relaxed">
                 Voice Input
               </h3>
@@ -712,7 +705,7 @@
                 ></iframe>
               </div>
             </div>
-            <div class="flex flex-col gap-4 hidden">
+            <div id="card-code-output" class="flex-col gap-4 hidden">
               <h3 class="text-neutral-600 text-3xl font-bold leading-relaxed">
                 Coding
               </h3>
@@ -728,7 +721,7 @@
                 ></iframe>
               </div>
             </div>
-            <div class="flex flex-col gap-2 hidden">
+            <div id="card-video-output" class="flex-col gap-2 hidden">
               <h3 class="text-neutral-600 text-3xl font-bold leading-relaxed">
                 Interactive Video
               </h3>
@@ -754,7 +747,7 @@
                 ></iframe>
               </div>
             </div>
-            <div class="flex flex-col gap-2 hidden overflow-y-auto">
+            <div id="card-lucky-output" class="flex-col gap-2 hidden">
               <h3 class="text-neutral-600 text-3xl font-bold leading-relaxed">
                 Randomized Template
               </h3>
@@ -782,7 +775,7 @@
                 ></iframe>
               </div>
             </div>
-            <div class="flex flex-col gap-2 hidden">
+            <div id="card-doc-output" class="flex-col gap-2 hidden">
               <h3 class="text-neutral-600 text-3xl font-bold leading-relaxed">
                 Document
               </h3>
@@ -802,7 +795,7 @@
                 ></iframe>
               </div>
             </div>
-            <div class="flex flex-col gap-2 hidden">
+            <div id="card-tabs-output" class="flex-col gap-2 hidden">
               <h3 class="text-neutral-600 text-3xl font-bold leading-relaxed">
                 Tab Switching
               </h3>
@@ -829,7 +822,7 @@
                 ></iframe>
               </div>
             </div>
-            <div class="flex flex-col gap-2 hidden">
+            <div id="card-pool-output" class="flex-col gap-2 hidden">
               <h3 class="text-neutral-600 text-3xl font-bold leading-relaxed">
                 Question Pool
               </h3>
@@ -859,9 +852,11 @@
         </div>
       </section>
 
-      <section id="trusted-by-section" class="bg-gray-50 py-4">
-        <div class="flex justify-between max-w-7xl mx-auto">
-          <div id="trusted-by" class="flex items-center gap-0.5">
+      <section id="trusted-by-section" class="bg-gray-50 py-8 lg:px-0">
+        <div
+          class="flex flex-col xl:flex-row justify-between max-w-7xl mx-auto"
+        >
+          <div id="trusted-by" class="flex items-center justify-center gap-0.5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="33"
@@ -884,49 +879,87 @@
               >Trusted by</span
             >
           </div>
-          <div id="companies" class="flex gap-5 items-center">
-            <div class="company px-[5px] py-4 flex justify-center items-center">
+          <div
+            id="companies"
+            class="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-6 items-center mt-10 xl:mt-0 sm:mx-2"
+          >
+            <div class="company flex justify-center items-center">
+              <img
+                class="w-[136.71px] h-[37.45px] sm:w-20 sm:h-8 lg:w-32 xl:w-[136.71px] xl:h-[37.45px]"
+                src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/codingal.png"
+                alt="codingal logo"
+              />
+            </div>
+            <!-- <div class="company px-[5px] py-4 flex justify-center items-center">
               <img
                 class="w-[136.71px] h-[37.45px]"
                 src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/codingal.png"
                 alt="codingal logo"
               />
+            </div> -->
+            <div class="company flex justify-center items-center">
+              <img
+                class="w-[142.80px] h-[35.17px] sm:w-20 sm:h-8 lg:w-32 xl:w-[142.80px]xlg:h-[35.17px]"
+                src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/treebo.png"
+                alt="treebo logo"
+              />
             </div>
-            <div class="company px-2">
+            <!-- <div class="company px-2">
               <img
                 class="w-[142.80px] h-[35.17px]"
                 src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/treebo.png"
                 alt="treebo logo"
               />
+            </div> -->
+            <div class="company flex justify-center items-center">
+              <img
+                class="w-[164.93px] h-[36.08px] sm:w-20 sm:h-8 lg:w-32 xl:w-[164.93px]xlg:h-[36.08px]"
+                src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/shadowfax.png"
+                alt="shadowfax logo"
+              />
             </div>
-            <div class="company px-[5px]">
+            <!-- <div class="company px-[5px]">
               <img
                 class="w-[164.93px] h-[36.08px]"
                 src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/shadowfax.png"
                 alt="shadowfax logo"
               />
-            </div>
-            <div class="company px-9">
+            </div> -->
+            <div class="company flex justify-center items-center">
               <img
-                class="w-[95.57px] h-[40.96px]"
+                class="w-[95.57px] h-[40.96px] sm:w-20 sm:h-8 lg:w-28 xl:w-[95.57px] xl:h-[40.96px]"
                 src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/antgroup.png"
                 alt="antgroup logo"
               />
             </div>
-            <div class="company px-4">
+            <div class="company flex justify-center items-center">
+              <img
+                class="w-[103.71px] h-[27.78px] sm:w-20 sm:h-8 lg:w-28 xl:w-[103.71px]xlg:h-[27.78px]"
+                src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/practo.png"
+                alt="practo logo"
+              />
+            </div>
+            <!-- <div class="company px-4">
               <img
                 class="w-[103.71px] h-[27.78px]"
                 src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/practo.png"
                 alt="practo logo"
               />
+            </div> -->
+            <div class="company flex justify-center items-center">
+              <img
+                class="w-[95.87px] h-[30.93px] sm:w-20 sm:h-8 lg:w-28 xl:w-[95.87px] xl:h-[30.93px]"
+                src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/1point1.png"
+                alt="1point1 logo"
+              />
             </div>
-            <div class="company px-5">
+            <!-- <div class="company px-5">
               <img
                 class="w-[95.87px] h-[30.93px]"
                 src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/1point1.png"
                 alt="1point1 logo"
               />
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
@@ -934,17 +967,19 @@
         <div
           class="max-w-7xl mx-auto p-10 flex flex-col gap-4 items-center text-center"
         >
-          <h3 class="text-3xl text-white font-bold leading-10">
+          <h3 class="text-2xl lg:text-3xl text-white font-bold leading-10">
             Discover the Power of Effective Skills Testing Today!
           </h3>
-          <p class="text-gray-50 text-lg font-normal leading-loose">
+          <p
+            class="text-gray-50 text-base lg:text-lg font-normal leading-loose mb-2"
+          >
             Get started with Equip and streamline your hiring process | No
             credit card needed
           </p>
-          <div class="flex gap-2">
+          <div class="flex flex-col lg:flex-row gap-4 lg:gap-2">
             <div>
               <button
-                class="bg-emerald-500 py-3 px-6 rounded-full border border-blue-900"
+                class="bg-emerald-500 py-3 px-6 rounded-full border border-blue-900 hover:scale-105 transition-all"
               >
                 <a
                   href="#"
@@ -956,7 +991,7 @@
             </div>
             <div class="flex flex-col gap-2">
               <button
-                class="py-3 px-6 border-2 border-emerald-500 rounded-full"
+                class="py-3 px-6 border-2 border-emerald-500 rounded-full hover:scale-105 transition-all"
               >
                 <a
                   href="#"
