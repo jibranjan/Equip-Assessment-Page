@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,7 +19,7 @@
   </head>
   <body class="font-['Inter']">
     <div>
-      <header class="sticky top-0 shadow-md">
+      <header class="bg-white sticky z-50 top-0 shadow-md">
         <nav class="bg-white border-gray-200 px-4 sm:px-3 lg:px-4 main-nav">
           <div class="max-w-screen-xl mx-auto">
             <div class="flex items-center h-16">
@@ -363,10 +363,10 @@
       </section>
 
       <section id="how-it-works" class="py-8">
-        <div class="max-w-7xl mx-auto h-[911px] grid grid-cols-12">
+        <div class="max-w-7xl mx-auto max-h-[911px] grid grid-cols-12">
           <div
             id="cards"
-            class="col-span-3 rounded-tl-3xl rounded-bl-3xl border border-zinc-300 overflow-y-scroll"
+            class="max-h-[911px] col-span-3 rounded-tl-3xl rounded-bl-3xl border border-zinc-300 overflow-y-auto"
           >
             <div
               class="card p-5 border-l-4 rounded-t-3xl border-emerald-400 border-b border-b-zinc-300 flex flex-col gap-3"
@@ -650,8 +650,212 @@
           </div>
           <div
             id="cards-output"
-            class="col-span-9 rounded-tr-3xl rounded-br-3xl border border-green-600"
-          ></div>
+            class="max-h-[911px] relative p-11 pt-10 col-span-9 rounded-tr-3xl rounded-br-3xl border border-gray-200 font-['Lato']"
+          >
+            <div class="absolute top-5 right-5 flex gap-2">
+              <svg
+                class="hover:bg-gray-100 rounded-full"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <g id="Chevron left">
+                  <path
+                    id="Icon"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.2486 6.35147C15.7172 6.8201 15.7172 7.5799 15.2486 8.04853L11.2971 12L15.2486 15.9515C15.7172 16.4201 15.7172 17.1799 15.2486 17.6485C14.7799 18.1172 14.0201 18.1172 13.5515 17.6485L8.7515 12.8485C8.28287 12.3799 8.28287 11.6201 8.7515 11.1515L13.5515 6.35147C14.0201 5.88284 14.7799 5.88284 15.2486 6.35147Z"
+                    fill="#6B7280"
+                  />
+                </g>
+              </svg>
+              <svg
+                class="hover:bg-gray-100 rounded-full"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <g id="Chevron right">
+                  <path
+                    id="Icon"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M8.7515 17.6485C8.28287 17.1799 8.28287 16.4201 8.7515 15.9515L12.703 12L8.7515 8.04853C8.28287 7.5799 8.28287 6.8201 8.7515 6.35147C9.22013 5.88284 9.97992 5.88284 10.4486 6.35147L15.2486 11.1515C15.7172 11.6201 15.7172 12.3799 15.2486 12.8485L10.4486 17.6485C9.97992 18.1172 9.22013 18.1172 8.7515 17.6485Z"
+                    fill="#6B7280"
+                  />
+                </g>
+              </svg>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="text-neutral-600 text-3xl font-bold leading-relaxed">
+                Voice Input
+              </h3>
+              <p
+                class="max-w-2xl text-neutral-500 text-base font-normal leading-normal"
+              >
+                You can ask a question via text, and the test taker must respond
+                via voice. Useful if you are hiring for customer-facing roles,
+                or if you want to see how well someone can articulate a response
+                without stopping.
+              </p>
+              <div>
+                <iframe
+                  id="voice-input"
+                  style="width: 90%"
+                  height="500"
+                  src="https://equip.co/assessment-features/i/voice-input"
+                  title="voice-input"
+                ></iframe>
+              </div>
+            </div>
+            <div class="flex flex-col gap-4 hidden">
+              <h3 class="text-neutral-600 text-3xl font-bold leading-relaxed">
+                Coding
+              </h3>
+
+              <div class="shadow">
+                <iframe
+                  id="coding"
+                  class="hidden md:block"
+                  style="width: 100%"
+                  height="600"
+                  src="https://equip.co/assessment-features/i/coding"
+                  title="coding"
+                ></iframe>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 hidden">
+              <h3 class="text-neutral-600 text-3xl font-bold leading-relaxed">
+                Interactive Video
+              </h3>
+              <p
+                class="max-w-3xl flex flex-col gap-3 text-neutral-500 text-base font-normal leading-normal"
+              >
+                <span
+                  >Upload any video and select playback times where questions
+                  are asked. You can even make the video rewind to an earlier
+                  time if the user gets the answer wrong!</span
+                >
+                <span
+                  >Click on the video to see this interactivity in action.</span
+                >
+              </p>
+              <div class="shadow">
+                <iframe
+                  id="interactive"
+                  style="width: 100%"
+                  height="500"
+                  src="https://equip.co/assessment-features/i/interactive"
+                  title="interactive"
+                ></iframe>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 hidden overflow-y-auto">
+              <h3 class="text-neutral-600 text-3xl font-bold leading-relaxed">
+                Randomized Template
+              </h3>
+              <p
+                class="max-w-3xl flex flex-col gap-3 text-neutral-500 text-base font-normal leading-normal"
+              >
+                <span
+                  >Online questions leak to other users. With this feature, you
+                  can upload a question template and different users will see
+                  different variants of the question.</span
+                >
+                <span
+                  >The image shows how a question like What is x+y? will show
+                  different values of x and y each time the question loads. Try
+                  closing and reopening this card.</span
+                >
+              </p>
+              <div>
+                <iframe
+                  id="randomize"
+                  style="width: 100%"
+                  height="800"
+                  src="https://equip.co/assessment-features/i/randomize"
+                  title="randomize"
+                ></iframe>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 hidden">
+              <h3 class="text-neutral-600 text-3xl font-bold leading-relaxed">
+                Document
+              </h3>
+              <p
+                class="max-w-3xl flex flex-col gap-3 text-neutral-500 text-base font-normal leading-normal"
+              >
+                Reference the document below and answer questions that follow at
+                the end. This feature is useful for open-book type tests.
+              </p>
+              <div>
+                <iframe
+                  id="doc"
+                  style="width: 100%"
+                  height="500"
+                  src="https://equip.co/assessment-features/i/doc"
+                  title="doc"
+                ></iframe>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 hidden">
+              <h3 class="text-neutral-600 text-3xl font-bold leading-relaxed">
+                Tab Switching
+              </h3>
+              <p
+                class="max-w-3xl flex flex-col gap-3 text-neutral-500 text-base font-normal leading-normal"
+              >
+                <span
+                  >The easiest way to cheat is to Google the answer. Let's show
+                  you how we solve this.</span
+                >
+                <span
+                  >Imagine clicking the button below starts a test. After
+                  clicking the button, just follow the instructions!</span
+                >
+              </p>
+              <div>
+                <iframe
+                  id="tab-switch"
+                  class="hidden md:block"
+                  style="width: 100%"
+                  height="600"
+                  src="https://equip.co/assessment-features/i/tab-switch"
+                  title="tab-switch"
+                ></iframe>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 hidden">
+              <h3 class="text-neutral-600 text-3xl font-bold leading-relaxed">
+                Question Pool
+              </h3>
+              <p
+                class="max-w-3xl flex flex-col gap-3 text-neutral-500 text-base font-normal leading-normal"
+              >
+                <span
+                  >The questions in a Question Pool are almost indistinguishable
+                  from one another. So, different users co-ordinating on a test
+                  is futile.</span
+                >
+                <span
+                  >Close this card and reopen it to see a new question.</span
+                >
+              </p>
+              <div>
+                <iframe
+                  id="question-pool"
+                  style="width: 100%"
+                  height="500"
+                  src="https://equip.co/assessment-features/i/question-pool"
+                  title="question-pool"
+                ></iframe>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
