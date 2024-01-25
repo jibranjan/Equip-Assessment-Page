@@ -1,3 +1,4 @@
+// adding interactivity of Assessment-features section for large devices
 let activeCardIndex = 0;
 
 let cardElArray = document.querySelectorAll(".asmt-feature-card");
@@ -14,28 +15,6 @@ cardElArray.forEach(function (cardEl) {
     }
   });
 });
-
-let activeCardMobId = "card-mob-gab";
-
-let cardMobElArray = document.querySelectorAll(".asmt-feature-mob-card");
-cardMobElArray.forEach(function (cardMobEl) {
-  cardMobEl.addEventListener("mouseover", function () {
-    let cardMobElId = cardMobEl.getAttribute("id");
-    if (activeCardMobId !== cardMobElId) {
-      changeIframe(activeCardMobId, cardMobElId);
-      // makePrevCardMobActive(activeCardMobId);
-      activeCardMobId = cardMobElId;
-    }
-  });
-});
-
-// function makePrevCardMobActive(previousActiveCardMobId) {
-//   let previousActiveCardMobEl = document.getElementById(
-//     previousActiveCardMobId
-//   );
-//   let activeSVG = previousActiveCardMobEl.querySelector(".card-mob-icon");
-//   activeSVG.classList.add("grayscale");
-// }
 
 function makePrevCardActive(previousActiveCardId) {
   let previousActiveCardEl = document.getElementById(previousActiveCardId);
@@ -69,6 +48,59 @@ function makeNextCardActive(nextActiveCardId) {
   let acticeCardDesc = nextActiveCardEl.querySelector(".card-desc");
   acticeCardDesc.classList.add("text-gray-700");
   acticeCardDesc.classList.remove("text-neutral-400");
+}
+
+// adding interactivity of Assessment-features section for small devices
+let activeCardMobId = "card-mob-gab";
+
+let cardMobElArray = document.querySelectorAll(".asmt-feature-mob-card");
+cardMobElArray.forEach(function (cardMobEl) {
+  cardMobEl.addEventListener("mouseover", function () {
+    let cardMobElId = cardMobEl.getAttribute("id");
+    if (activeCardMobId !== cardMobElId) {
+      makePrevCardMobActive(activeCardMobId);
+      makeNextCardMobActive(cardMobElId);
+      changeIframe(activeCardMobId, cardMobElId);
+      activeCardMobId = cardMobElId;
+    }
+  });
+});
+
+function makePrevCardMobActive(previousActiveCardMobId) {
+  let previousActiveCardMobEl = document.getElementById(
+    previousActiveCardMobId
+  );
+
+  previousActiveCardMobEl.classList.remove("border-l-4");
+  let activeSVG = previousActiveCardMobEl.querySelector(".card-mob-icon");
+  activeSVG.classList.add("grayscale");
+
+  let activeCardMobHeading =
+    previousActiveCardMobEl.querySelector(".card-mob-heading ");
+  activeCardMobHeading.classList.add("text-gray-400");
+  activeCardMobHeading.classList.remove("text-blue-900");
+
+  let activeChevron =
+    previousActiveCardMobEl.querySelector(".card-mob-chevron");
+  activeChevron.classList.add("grayscale", "opacity-50");
+  activeChevron.classList.remove("rotate-180");
+}
+
+function makeNextCardMobActive(nextActiveCardMobId) {
+  let nextActiveCardMobEl = document.getElementById(nextActiveCardMobId);
+  nextActiveCardMobEl.classList.add("border-l-4");
+
+  let activeSVG = nextActiveCardMobEl.querySelector(".card-mob-icon");
+  activeSVG.classList.remove("grayscale");
+
+  let activeCardMobHeading =
+    nextActiveCardMobEl.querySelector(".card-mob-heading ");
+  activeCardMobHeading.classList.remove("text-gray-400");
+  activeCardMobHeading.classList.add("text-blue-900");
+
+  let activeChevron = nextActiveCardMobEl.querySelector(".card-mob-chevron");
+  activeChevron.classList.remove("grayscale", "opacity-50");
+  activeChevron.classList.add("rotate-180");
 }
 
 // Same for mob and computer
