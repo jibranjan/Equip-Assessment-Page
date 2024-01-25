@@ -83,6 +83,7 @@
                     >
                       <span>Skills</span>
                       <svg
+                        class="grayscale"
                         xmlns="http://www.w3.org/2000/svg"
                         class="h-3 w-3 sm:h-4 sm:w-4 ml-1"
                         fill="none"
@@ -339,11 +340,14 @@
         </nav>
       </header>
 
-      <section id="hero" class="bg-blue-50 py-8 px-6 md:px-3 lg:px-4">
+      <section
+        id="hero"
+        class="bg-blue-50 py-3 sm:py-6 md:py-8 px-1 md:px-3 lg:px-4"
+      >
         <div class="max-w-7xl mx-auto flex flex-col gap-2.5">
           <div class="flex justify-center md:justify-start">
             <h1
-              class="text-blue-900 text-3xl font-bold leading-10 text-center md:text-left"
+              class="text-blue-900 text-2xl md:text-3xl font-bold leading-loose md:leading-10 text-center md:text-left"
             >
               Our Coolest Assessment Features
             </h1>
@@ -361,20 +365,688 @@
           </div>
         </div>
       </section>
+      <!-- The belor code for how-it-works will be visible till breakpoint lg -->
+      <!-- asmt=assessment -->
+      <section id="asmt-features-mob" class="lg:hidden">
+        <div id="cards-mob" class="mx-auto py-5 px-3.5">
+          <div
+            id="card-mob-gab"
+            class="asmt-feature-mob-card cursor-pointer px-3 py-2 border-l-4 border-emerald-400 border-b border-b-zinc-300 flex flex-col gap-1.5"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div>
+                  <svg
+                    class="card-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="33"
+                    height="32"
+                    viewBox="0 0 33 32"
+                    fill="none"
+                  >
+                    <g>
+                      <path
+                        id="Icon"
+                        d="M25.8333 14.6667C25.8333 19.8214 21.6546 24.0001 16.5 24.0001M16.5 24.0001C11.3453 24.0001 7.16666 19.8214 7.16666 14.6667M16.5 24.0001V29.3334M16.5 29.3334H11.1667M16.5 29.3334H21.8333M16.5 18.6667C14.2909 18.6667 12.5 16.8759 12.5 14.6667V6.66675C12.5 4.45761 14.2909 2.66675 16.5 2.66675C18.7091 2.66675 20.5 4.45761 20.5 6.66675V14.6667C20.5 16.8759 18.7091 18.6667 16.5 18.6667Z"
+                        stroke="#3BB98E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <div>
+                  <h3
+                    class="card-mob-heading text-blue-900 text-lg xl:text-xl font-semibold leading-7"
+                  >
+                    Gift Of The Gab
+                  </h3>
+                </div>
+              </div>
+              <div>
+                <svg
+                  class="card-mob-chevron rotate-180"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="#292996"
+                >
+                  <g>
+                    <path
+                      id=""
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.40677 9.11038C6.8754 8.64175 7.6352 8.64175 8.10383 9.11038L12.0553 13.0619L16.0068 9.11038C16.4754 8.64175 17.2352 8.64175 17.7038 9.11038C18.1725 9.57901 18.1725 10.3388 17.7038 10.8074L12.9038 15.6074C12.4352 16.0761 11.6754 16.0761 11.2068 15.6074L6.40677 10.8074C5.93814 10.3388 5.93814 9.57901 6.40677 9.11038Z"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div id="card-mob-gab-output" class="flex flex-col gap-2.5">
+              <div>
+                <p
+                  class="text-sm text-gray-700 font-['Inter'] font-medium leading-tight"
+                >
+                  People want to be heard? Well, let's hear them. And judge them
+                  based on what they say.
+                </p>
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <h3
+                  class="text-neutral-600 text-base font-semibold leading-normal font-['Inter']"
+                >
+                  Voice Input
+                </h3>
+                <p
+                  class="max-w-2xl text-neutral-500 text-base font-normal leading-normal font-['Lato'] mb-1.5"
+                >
+                  You can ask a question via text, and the test taker must
+                  respond via voice. Useful if you are hiring for
+                  customer-facing roles, or if you want to see how well someone
+                  can articulate a response without stopping.
+                </p>
+                <div class="h-60 sm:h-72 overflow-y-hidden">
+                  <iframe
+                    id="voice-input"
+                    style="width: 100%"
+                    height="500"
+                    src="https://equip.co/assessment-features/i/voice-input"
+                    title="voice-input"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="card-mob-code"
+            class="asmt-feature-mob-card cursor-pointer px-3 py-2 border-b border-b-zinc-300 flex flex-col gap-1.5"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div>
+                  <svg
+                    class="card-icon grayscale"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="33"
+                    height="32"
+                    viewBox="0 0 33 32"
+                    fill="none"
+                  >
+                    <g id="Icon/Outline/code">
+                      <path
+                        id="Icon"
+                        d="M13.8333 26.6666L19.1667 5.33325M24.5 10.6666L29.8333 15.9999L24.5 21.3333M8.49999 21.3333L3.16666 15.9999L8.49999 10.6666"
+                        stroke="#3BB98E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <div>
+                  <h3
+                    class="card-mob-heading text-gray-400 text-lg xl:text-xl font-semibold leading-7"
+                  >
+                    Code Runner
+                  </h3>
+                </div>
+              </div>
+              <div>
+                <svg
+                  class="card-mob-chevron"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="#9CA3AF"
+                >
+                  <g>
+                    <path
+                      id="Icon"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.40677 9.11038C6.8754 8.64175 7.6352 8.64175 8.10383 9.11038L12.0553 13.0619L16.0068 9.11038C16.4754 8.64175 17.2352 8.64175 17.7038 9.11038C18.1725 9.57901 18.1725 10.3388 17.7038 10.8074L12.9038 15.6074C12.4352 16.0761 11.6754 16.0761 11.2068 15.6074L6.40677 10.8074C5.93814 10.3388 5.93814 9.57901 6.40677 9.11038Z"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div id="card-mob-code-output" class="hidden flex flex-col gap-2.5">
+              <div>
+                <p
+                  class="text-sm text-gray-700 font-['Inter'] font-medium leading-tight"
+                >
+                  Test a programmer's coding skills. User writes code in an IDE
+                  and the code is automatically evaluated.
+                </p>
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <h3
+                  class="text-neutral-600 text-base font-semibold leading-normal font-['Inter']"
+                >
+                  Coding
+                </h3>
+                <p
+                  class="max-w-2xl text-neutral-500 text-base font-normal leading-normal font-['Lato'] mb-1.5 md:hidden"
+                >
+                  This test cannot be opened on a small-screen device. Try
+                  opening it on a tablet or desktop. Or you can use this
+                  browser's
+                  <strong class="text-gray-700">Desktop Site</strong> view, if
+                  it supports it.
+                </p>
+                <div class="h-60 md:h-full overflow-y-hidden hidden md:block">
+                  <iframe
+                    id="coding"
+                    style="width: 100%"
+                    height="600"
+                    src="https://equip.co/assessment-features/i/coding"
+                    title="coding"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="card-mob-video"
+            class="asmt-feature-mob-card cursor-pointer px-3 py-2 border-b border-b-zinc-300 flex flex-col gap-1.5"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div>
+                  <svg
+                    class="card-mob-icon grayscale"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="33"
+                    height="32"
+                    viewBox="0 0 33 32"
+                    fill="none"
+                  >
+                    <g id="Icon/Outline/video-camera">
+                      <path
+                        id="Icon"
+                        d="M20.5 13.3333L26.5704 10.2981C27.4569 9.85487 28.5 10.4995 28.5 11.4907V20.5093C28.5 21.5005 27.4569 22.1451 26.5704 21.7019L20.5 18.6667M7.16667 24H17.8333C19.3061 24 20.5 22.8061 20.5 21.3333V10.6667C20.5 9.19391 19.3061 8 17.8333 8H7.16667C5.69391 8 4.5 9.19391 4.5 10.6667V21.3333C4.5 22.8061 5.69391 24 7.16667 24Z"
+                        stroke="#3BB98E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <div>
+                  <h3
+                    class="card-mob-heading text-gray-400 text-lg xl:text-xl font-semibold leading-7"
+                  >
+                    Interactive Video
+                  </h3>
+                </div>
+              </div>
+              <div>
+                <svg
+                  class="card-mob-chevron"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="#9CA3AF"
+                >
+                  <g>
+                    <path
+                      id="Icon"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.40677 9.11038C6.8754 8.64175 7.6352 8.64175 8.10383 9.11038L12.0553 13.0619L16.0068 9.11038C16.4754 8.64175 17.2352 8.64175 17.7038 9.11038C18.1725 9.57901 18.1725 10.3388 17.7038 10.8074L12.9038 15.6074C12.4352 16.0761 11.6754 16.0761 11.2068 15.6074L6.40677 10.8074C5.93814 10.3388 5.93814 9.57901 6.40677 9.11038Z"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div
+              id="card-mob-video-output"
+              class="hidden flex flex-col gap-2.5"
+            >
+              <div>
+                <p
+                  class="text-sm text-gray-700 font-['Inter'] font-medium leading-tight"
+                >
+                  Want to ensure your users pay attention to videos? Make the
+                  videos interactive by layering questions.
+                </p>
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <h3
+                  class="text-neutral-600 text-base font-semibold leading-normal font-['Inter']"
+                >
+                  Interactive Video
+                </h3>
+                <p
+                  class="max-w-2xl flex flex-col gap-3 text-neutral-500 text-base font-normal leading-normal font-['Lato'] mb-1.5"
+                >
+                  <span>
+                    Upload any video and select playback times where questions
+                    are asked. You can even make the video rewind to an earlier
+                    time if the user gets the answer wrong!
+                  </span>
+                  <span>
+                    Click on the video to see this interactivity in action.
+                  </span>
+                </p>
+                <div class="h-60 md:h-full overflow-y-auto">
+                  <iframe
+                    id="interactive"
+                    style="width: 100%"
+                    height="600"
+                    src="https://equip.co/assessment-features/i/interactive"
+                    title="interactive"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="card-mob-lucky"
+            class="asmt-feature-mob-card cursor-pointer px-3 py-2 border-b border-b-zinc-300 flex flex-col gap-1.5"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div>
+                  <svg
+                    class="card-mob-icon grayscale"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="33"
+                    height="32"
+                    viewBox="0 0 33 32"
+                    fill="none"
+                  >
+                    <g id="Icon/Outline/light-bulb">
+                      <path
+                        id="Icon"
+                        d="M13.3847 22.6667H19.6153M16.5 4V5.33333M24.9853 7.51472L24.0425 8.45753M28.5001 15.9999H27.1667M5.83339 15.9999H4.50006M8.95752 8.45753L8.01471 7.51472M11.7859 20.7141C9.18245 18.1106 9.18245 13.8895 11.7859 11.286C14.3894 8.68249 18.6105 8.68249 21.214 11.286C23.8175 13.8895 23.8175 18.1106 21.214 20.7141L20.4846 21.4435C19.6407 22.2874 19.1667 23.4319 19.1667 24.6253V25.3333C19.1667 26.8061 17.9727 28 16.5 28C15.0272 28 13.8333 26.8061 13.8333 25.3333V24.6253C13.8333 23.4319 13.3593 22.2874 12.5154 21.4435L11.7859 20.7141Z"
+                        stroke="#3BB98E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <div>
+                  <h3
+                    class="card-mob-heading text-gray-400 text-lg xl:text-xl font-semibold leading-7"
+                  >
+                    I'm Feeling Lucky
+                  </h3>
+                </div>
+              </div>
+              <div>
+                <svg
+                  class="card-mob-chevron"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="#9CA3AF"
+                >
+                  <g id="card-mob-lucky-chevron">
+                    <path
+                      id="Icon"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.40677 9.11038C6.8754 8.64175 7.6352 8.64175 8.10383 9.11038L12.0553 13.0619L16.0068 9.11038C16.4754 8.64175 17.2352 8.64175 17.7038 9.11038C18.1725 9.57901 18.1725 10.3388 17.7038 10.8074L12.9038 15.6074C12.4352 16.0761 11.6754 16.0761 11.2068 15.6074L6.40677 10.8074C5.93814 10.3388 5.93814 9.57901 6.40677 9.11038Z"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div
+              id="card-mob-lucky-output"
+              class="hidden flex flex-col gap-2.5"
+            >
+              <div>
+                <p
+                  class="text-sm text-gray-700 font-['Inter'] font-medium leading-tight"
+                >
+                  Automagically generate different variants for the same
+                  question, for different users. At scale.
+                </p>
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <h3
+                  class="text-neutral-600 text-base font-semibold leading-normal font-['Inter']"
+                >
+                  Randomized Output
+                </h3>
+                <p
+                  class="max-w-2xl flex flex-col gap-3 text-neutral-500 text-base font-normal leading-normal font-['Lato'] mb-1.5"
+                >
+                  <span
+                    >Online questions
+                    <strong class="text-gray-700">leak</strong> to other users.
+                    With this feature, you can upload a question template and
+                    different users will see different variants of the
+                    question.</span
+                  >
+                  <span
+                    >The image shows how a question like
+                    <strong class="text-gray-700">What is x+y?</strong> will
+                    show different values of
+                    <strong class="text-gray-700">x</strong> and
+                    <strong class="text-gray-700">y</strong> each time the
+                    question loads. Try closing and reopening this card.</span
+                  >
+                </p>
+                <div class="h-60 md:h-full overflow-y-auto">
+                  <iframe
+                    id="randomize"
+                    style="width: 100%"
+                    height="800"
+                    src="https://equip.co/assessment-features/i/randomize"
+                    title="randomize"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="card-mob-doc"
+            class="asmt-feature-mob-card cursor-pointer px-3 py-2 border-b border-b-zinc-300 flex flex-col gap-1.5"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div>
+                  <svg
+                    class="card-mob-icon grayscale"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="33"
+                    height="32"
+                    viewBox="0 0 33 32"
+                    fill="none"
+                  >
+                    <g id="Icon/Outline/code">
+                      <path
+                        id="Icon"
+                        d="M12.5 22.6667V20M16.5 22.6667V17.3333M20.5 22.6667V14.6667M23.1667 28H9.83332C8.36056 28 7.16666 26.8061 7.16666 25.3333V6.66667C7.16666 5.19391 8.36056 4 9.83332 4H17.281C17.6347 4 17.9738 4.14048 18.2238 4.39052L25.4428 11.6095C25.6928 11.8595 25.8333 12.1987 25.8333 12.5523V25.3333C25.8333 26.8061 24.6394 28 23.1667 28Z"
+                        stroke="#3BB98E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <div>
+                  <h3
+                    class="card-mob-heading text-neutral-400 text-lg xl:text-xl font-semibold leading-7"
+                  >
+                    What’s up, Doc?
+                  </h3>
+                </div>
+              </div>
+              <div>
+                <svg
+                  class="card-mob-chevron"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="#9CA3AF"
+                >
+                  <g>
+                    <path
+                      id="Icon"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.40677 9.11038C6.8754 8.64175 7.6352 8.64175 8.10383 9.11038L12.0553 13.0619L16.0068 9.11038C16.4754 8.64175 17.2352 8.64175 17.7038 9.11038C18.1725 9.57901 18.1725 10.3388 17.7038 10.8074L12.9038 15.6074C12.4352 16.0761 11.6754 16.0761 11.2068 15.6074L6.40677 10.8074C5.93814 10.3388 5.93814 9.57901 6.40677 9.11038Z"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div id="card-mob-doc-output" class="hidden flex flex-col gap-2.5">
+              <div>
+                <p class="text-sm font-['Inter'] font-medium leading-tight">
+                  Upload a PDF and ask questions based on it. No more taking
+                  screenshots and copy-pasting text.
+                </p>
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <h3
+                  class="text-neutral-600 text-base font-semibold leading-normal font-['Inter']"
+                >
+                  Document
+                </h3>
+                <p
+                  class="max-w-2xl text-neutral-500 text-base font-normal leading-normal font-['Lato'] mb-1.5"
+                >
+                  Reference the document below and answer questions that follow
+                  at the end. This feature is useful for open-book type tests.
+                </p>
+                <div class="h-60 md:h-full overflow-y-auto">
+                  <iframe
+                    id="doc"
+                    style="width: 100%"
+                    height="500"
+                    src="https://equip.co/assessment-features/i/doc"
+                    title="doc"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="card-mob-tabs"
+            class="asmt-feature-mob-card cursor-pointer px-3 py-2 border-b border-b-zinc-300 flex flex-col gap-1.5"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div>
+                  <svg
+                    class="card-mob-icon grayscale"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="33"
+                    height="32"
+                    viewBox="0 0 33 32"
+                    fill="none"
+                  >
+                    <g id="Icon/Outline/code">
+                      <path
+                        id="Icon"
+                        d="M10.5 19.6667L9.5 23.6667L8.16667 25H18.8333L17.5 23.6667L16.5 19.6667M1.5 14.3333H25.5M4.16667 19.6667H22.8333C24.3061 19.6667 25.5 18.4728 25.5 17V3.66667C25.5 2.19391 24.3061 1 22.8333 1H4.16667C2.69391 1 1.5 2.19391 1.5 3.66667V17C1.5 18.4728 2.69391 19.6667 4.16667 19.6667Z"
+                        stroke="#3BB98E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <div>
+                  <h3
+                    class="card-mob-heading text-neutral-400 text-lg xl:text-xl font-semibold leading-7"
+                  >
+                    Keep Close Tabs
+                  </h3>
+                </div>
+              </div>
+              <div>
+                <svg
+                  class="card-mob-chevron"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="#9CA3AF"
+                >
+                  <g>
+                    <path
+                      id="Icon"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.40677 9.11038C6.8754 8.64175 7.6352 8.64175 8.10383 9.11038L12.0553 13.0619L16.0068 9.11038C16.4754 8.64175 17.2352 8.64175 17.7038 9.11038C18.1725 9.57901 18.1725 10.3388 17.7038 10.8074L12.9038 15.6074C12.4352 16.0761 11.6754 16.0761 11.2068 15.6074L6.40677 10.8074C5.93814 10.3388 5.93814 9.57901 6.40677 9.11038Z"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div id="card-mob-tabs-output" class="hidden flex flex-col gap-2.5">
+              <div>
+                <p class="text-sm font-['Inter'] font-medium leading-tight">
+                  No more Googling an answer. Track the screen the test taker is
+                  on and even record screenshots.
+                </p>
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <h3
+                  class="text-neutral-600 text-base font-semibold leading-normal font-['Inter']"
+                >
+                  Tab Switching
+                </h3>
+                <p
+                  class="max-w-2xl flex flex-col gap-3 text-neutral-500 text-base font-normal leading-normal font-['Lato'] mb-1.5"
+                >
+                  <span class="md:hidden"
+                    >This test cannot be opened on a small-screen device. Try
+                    opening it on a laptop or desktop.</span
+                  >
+                  <span class="hidden md:inline-block"
+                    >The easiest way to cheat is to Google the answer. Let's
+                    show you how we solve this.</span
+                  >
+                  <span class="hidden md:inline-block"
+                    >Imagine clicking the button below starts a test. After
+                    clicking the button, just follow the instructions!</span
+                  >
+                </p>
+                <div class="h-60 md:h-full overflow-y-hidden hidden md:block">
+                  <iframe
+                    id="tab-switch"
+                    style="width: 100%"
+                    height="600"
+                    src="https://equip.co/assessment-features/i/tab-switch"
+                    title="tab-switch"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="card-mob-pool"
+            class="asmt-feature-mob-card cursor-pointer px-3 py-2 border-b border-b-zinc-300 flex flex-col gap-1.5"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div>
+                  <svg
+                    class="card-mob-icon grayscale"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="33"
+                    height="32"
+                    viewBox="0 0 33 32"
+                    fill="none"
+                  >
+                    <g id="Icon/Outline/code">
+                      <path
+                        id="Icon"
+                        d="M23.696 14.0001C23.696 12.5627 23.6424 11.1382 23.535 9.72772C23.4525 8.61022 22.9712 7.55958 22.1789 6.76724C21.3865 5.9749 20.3359 5.4936 19.2184 5.41105C16.3742 5.19648 13.5179 5.19648 10.6737 5.41105C9.55622 5.4936 8.50557 5.9749 7.71323 6.76724C6.92089 7.55958 6.43959 8.61022 6.35704 9.72772C6.33721 9.98439 6.31971 10.2422 6.30338 10.5001M23.696 14.0001L27.196 10.5001M23.696 14.0001L20.196 10.5001M6.19604 14.0001C6.19604 15.4374 6.24971 16.8619 6.35704 18.2724C6.43959 19.3899 6.92089 20.4405 7.71323 21.2329C8.50557 22.0252 9.55622 22.5065 10.6737 22.5891C13.5179 22.8037 16.3742 22.8037 19.2184 22.5891C20.3359 22.5065 21.3865 22.0252 22.1789 21.2329C22.9712 20.4405 23.4525 19.3899 23.535 18.2724C23.5549 18.0157 23.5724 17.7579 23.5887 17.5001M6.19604 14.0001L9.69604 17.5001M6.19604 14.0001L2.69604 17.5001"
+                        stroke="#3BB98E"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <div>
+                  <h3
+                    class="card-mob-heading text-neutral-400 text-lg xl:text-xl font-semibold leading-7"
+                  >
+                    Pool You Can’t Fool
+                  </h3>
+                </div>
+              </div>
+              <div>
+                <svg
+                  class="card-mob-chevron"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="#9CA3AF"
+                >
+                  <g>
+                    <path
+                      id="Icon"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.40677 9.11038C6.8754 8.64175 7.6352 8.64175 8.10383 9.11038L12.0553 13.0619L16.0068 9.11038C16.4754 8.64175 17.2352 8.64175 17.7038 9.11038C18.1725 9.57901 18.1725 10.3388 17.7038 10.8074L12.9038 15.6074C12.4352 16.0761 11.6754 16.0761 11.2068 15.6074L6.40677 10.8074C5.93814 10.3388 5.93814 9.57901 6.40677 9.11038Z"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div id="card-mob-pool-output" class="hidden flex flex-col gap-2.5">
+              <div>
+                <p class="text-sm font-['Inter'] font-medium leading-tight">
+                  Conducting a test with many simultaneous users? Group
+                  similar-looking questions into a pool.
+                </p>
+              </div>
+              <div class="flex flex-col gap-1.5">
+                <h3
+                  class="text-neutral-600 text-base font-semibold leading-normal font-['Inter']"
+                >
+                  Question Pool
+                </h3>
+                <p
+                  class="max-w-2xl flex flex-col gap-3 text-neutral-500 text-base font-normal leading-normal font-['Lato'] mb-1.5"
+                >
+                  <span
+                    >The questions in a Question Pool are
+                    <strong class="text-gray-700"
+                      >almost indistinguishable</strong
+                    >
+                    from one another. So, different users
+                    <i>co-ordinating</i> on a test is futile.</span
+                  >
+                  <span
+                    >Close this card and reopen it to see a new question.</span
+                  >
+                </p>
+                <div class="h-60 md:h-full overflow-y-auto">
+                  <iframe
+                    id="question-pool"
+                    style="width: 100%"
+                    height="500"
+                    src="https://equip.co/assessment-features/i/question-pool"
+                    title="question-pool"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- The below code for asmt-features will be visible after breakpoint lg -->
 
-      <section id="how-it-works" class="py-8">
-        <div class="max-w-7xl mx-auto max-h-[911px] grid grid-cols-12">
+      <section id="asmt-features-desktop" class="hidden lg:block py-8 px-4">
+        <div class="max-w-7xl mx-auto h-[911px] grid grid-cols-12">
           <div
             id="cards"
-            class="max-h-[911px] col-span-3 rounded-tl-3xl rounded-bl-3xl border border-zinc-300 overflow-y-auto"
+            class="col-span-3 h-full rounded-tl-3xl rounded-bl-3xl border border-zinc-300 overflow-y-auto"
           >
             <div
               id="card-gab"
-              class="hiw-card p-5 border-l-4 rounded-t-3xl border-emerald-400 border-b border-b-zinc-300 flex flex-col gap-3"
+              class="asmt-feature-card p-5 border-l-4 rounded-t-3xl border-emerald-400 border-b border-b-zinc-300 flex flex-col gap-3"
+              data-card-index="0"
             >
               <div class="flex items-center gap-3">
                 <div>
                   <svg
+                    class="card-icon"
                     xmlns="http://www.w3.org/2000/svg"
                     width="33"
                     height="32"
@@ -394,13 +1066,17 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-blue-900 text-xl font-semibold leading-7">
+                  <h3
+                    class="card-heading text-blue-900 text-lg xl:text-xl font-semibold leading-7"
+                  >
                     Gift Of The Gab
                   </h3>
                 </div>
               </div>
               <div>
-                <p class="text-blue-900 text-base font-medium leading-normal">
+                <p
+                  class="card-desc text-sm text-gray-700 xl:text-base font-medium leading-normal"
+                >
                   People want to be heard? Well, let's hear them. And judge them
                   based on what they say.
                 </p>
@@ -408,11 +1084,13 @@
             </div>
             <div
               id="card-code"
-              class="hiw-card text-neutral-400 p-5 flex flex-col gap-3 bg-stone-50 border-b border-zinc-300 border-opacity"
+              class="asmt-feature-card text-neutral-400 p-5 flex flex-col gap-3 bg-stone-50 border-b border-l-emerald-400 border-opacity"
+              data-card-index="1"
             >
               <div class="flex items-center gap-3">
                 <div>
                   <svg
+                    class="card-icon grayscale"
                     xmlns="http://www.w3.org/2000/svg"
                     width="33"
                     height="32"
@@ -423,7 +1101,7 @@
                       <path
                         id="Icon"
                         d="M13.8333 26.6666L19.1667 5.33325M24.5 10.6666L29.8333 15.9999L24.5 21.3333M8.49999 21.3333L3.16666 15.9999L8.49999 10.6666"
-                        stroke="#8D8D8D"
+                        stroke="#3BB98E"
                         stroke-width="2"
                         stroke-linecap="round"
                         stroke-linejoin="round"
@@ -432,11 +1110,17 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-xl font-semibold leading-7">Code Runner</h3>
+                  <h3
+                    class="card-heading text-lg xl:text-xl font-semibold leading-7"
+                  >
+                    Code Runner
+                  </h3>
                 </div>
               </div>
               <div>
-                <p class="text-base font-medium leading-normal">
+                <p
+                  class="card-desc text-sm xl:text-base font-medium leading-normal"
+                >
                   Test a programmer's coding skills. User writes code in an IDE
                   and the code is automatically evaluated.
                 </p>
@@ -444,11 +1128,13 @@
             </div>
             <div
               id="card-video"
-              class="hiw-card text-neutral-400 p-5 flex flex-col gap-3 bg-stone-50 border-b border-zinc-300 border-opacity"
+              class="asmt-feature-card text-neutral-400 p-5 flex flex-col gap-3 bg-stone-50 border-b border-l-emerald-400 border-opacity"
+              data-card-index="2"
             >
               <div class="flex items-center gap-3">
                 <div>
                   <svg
+                    class="card-icon grayscale"
                     xmlns="http://www.w3.org/2000/svg"
                     width="33"
                     height="32"
@@ -459,7 +1145,7 @@
                       <path
                         id="Icon"
                         d="M20.5 13.3333L26.5704 10.2981C27.4569 9.85487 28.5 10.4995 28.5 11.4907V20.5093C28.5 21.5005 27.4569 22.1451 26.5704 21.7019L20.5 18.6667M7.16667 24H17.8333C19.3061 24 20.5 22.8061 20.5 21.3333V10.6667C20.5 9.19391 19.3061 8 17.8333 8H7.16667C5.69391 8 4.5 9.19391 4.5 10.6667V21.3333C4.5 22.8061 5.69391 24 7.16667 24Z"
-                        stroke="#8D8D8D"
+                        stroke="#3BB98E"
                         stroke-width="2"
                         stroke-linecap="round"
                         stroke-linejoin="round"
@@ -468,13 +1154,17 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-xl font-semibold leading-7">
+                  <h3
+                    class="card-heading text-lg xl:text-xl font-semibold leading-7"
+                  >
                     Interactive Video
                   </h3>
                 </div>
               </div>
               <div>
-                <p class="text-base font-medium leading-normal">
+                <p
+                  class="card-desc text-sm xl:text-base font-medium leading-normal"
+                >
                   Want to ensure your users pay attention to videos? Make the
                   videos interactive by layering questions.
                 </p>
@@ -482,11 +1172,13 @@
             </div>
             <div
               id="card-lucky"
-              class="hiw-card text-neutral-400 p-5 flex flex-col gap-3 bg-stone-50 border-b border-zinc-300 border-opacity"
+              class="asmt-feature-card text-neutral-400 p-5 flex flex-col gap-3 bg-stone-50 border-b border-l-emerald-400 border-opacity"
+              data-card-index="3"
             >
               <div class="flex items-center gap-3">
                 <div>
                   <svg
+                    class="card-icon grayscale"
                     xmlns="http://www.w3.org/2000/svg"
                     width="33"
                     height="32"
@@ -497,7 +1189,7 @@
                       <path
                         id="Icon"
                         d="M13.3847 22.6667H19.6153M16.5 4V5.33333M24.9853 7.51472L24.0425 8.45753M28.5001 15.9999H27.1667M5.83339 15.9999H4.50006M8.95752 8.45753L8.01471 7.51472M11.7859 20.7141C9.18245 18.1106 9.18245 13.8895 11.7859 11.286C14.3894 8.68249 18.6105 8.68249 21.214 11.286C23.8175 13.8895 23.8175 18.1106 21.214 20.7141L20.4846 21.4435C19.6407 22.2874 19.1667 23.4319 19.1667 24.6253V25.3333C19.1667 26.8061 17.9727 28 16.5 28C15.0272 28 13.8333 26.8061 13.8333 25.3333V24.6253C13.8333 23.4319 13.3593 22.2874 12.5154 21.4435L11.7859 20.7141Z"
-                        stroke="#8D8D8D"
+                        stroke="#3BB98E"
                         stroke-width="2"
                         stroke-linecap="round"
                         stroke-linejoin="round"
@@ -506,13 +1198,17 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-xl font-semibold leading-7">
+                  <h3
+                    class="card-heading text-lg xl:text-xl font-semibold leading-7"
+                  >
                     I'm Feeling Lucky
                   </h3>
                 </div>
               </div>
               <div>
-                <p class="text-base font-medium leading-normal">
+                <p
+                  class="card-desc text-sm xl:text-base font-medium leading-normal"
+                >
                   Automagically generate different variants for the same
                   question, for different users. At scale.
                 </p>
@@ -520,11 +1216,13 @@
             </div>
             <div
               id="card-doc"
-              class="hiw-card text-neutral-400 p-5 flex flex-col gap-3 bg-stone-50 border-b border-zinc-300 border-opacity"
+              class="asmt-feature-card text-neutral-400 p-5 flex flex-col gap-3 bg-stone-50 border-b border-l-emerald-400 border-opacity"
+              data-card-index="4"
             >
               <div class="flex items-center gap-3">
                 <div>
                   <svg
+                    class="card-icon grayscale"
                     xmlns="http://www.w3.org/2000/svg"
                     width="33"
                     height="32"
@@ -535,7 +1233,7 @@
                       <path
                         id="Icon"
                         d="M12.5 22.6667V20M16.5 22.6667V17.3333M20.5 22.6667V14.6667M23.1667 28H9.83332C8.36056 28 7.16666 26.8061 7.16666 25.3333V6.66667C7.16666 5.19391 8.36056 4 9.83332 4H17.281C17.6347 4 17.9738 4.14048 18.2238 4.39052L25.4428 11.6095C25.6928 11.8595 25.8333 12.1987 25.8333 12.5523V25.3333C25.8333 26.8061 24.6394 28 23.1667 28Z"
-                        stroke="#8D8D8D"
+                        stroke="#3BB98E"
                         stroke-width="2"
                         stroke-linecap="round"
                         stroke-linejoin="round"
@@ -544,13 +1242,17 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-xl font-semibold leading-7">
+                  <h3
+                    class="card-heading text-lg xl:text-xl font-semibold leading-7"
+                  >
                     What's up, Doc?
                   </h3>
                 </div>
               </div>
               <div>
-                <p class="text-base font-medium leading-normal">
+                <p
+                  class="card-desc text-sm xl:text-base font-medium leading-normal"
+                >
                   Upload a PDF and ask questions based on it. No more taking
                   screenshots and copy-pasting text.
                 </p>
@@ -558,11 +1260,13 @@
             </div>
             <div
               id="card-tabs"
-              class="hiw-card text-neutral-400 p-5 flex flex-col gap-3 bg-stone-50 border-b border-zinc-300 border-opacity"
+              class="asmt-feature-card text-neutral-400 p-5 flex flex-col gap-3 bg-stone-50 border-b border-l-emerald-400 border-opacity"
+              data-card-index="5"
             >
               <div class="flex items-center gap-3">
                 <div>
                   <svg
+                    class="card-icon grayscale"
                     xmlns="http://www.w3.org/2000/svg"
                     width="27"
                     height="26"
@@ -572,7 +1276,7 @@
                     <path
                       id="Icon"
                       d="M10.5 19.6667L9.5 23.6667L8.16667 25H18.8333L17.5 23.6667L16.5 19.6667M1.5 14.3333H25.5M4.16667 19.6667H22.8333C24.3061 19.6667 25.5 18.4728 25.5 17V3.66667C25.5 2.19391 24.3061 1 22.8333 1H4.16667C2.69391 1 1.5 2.19391 1.5 3.66667V17C1.5 18.4728 2.69391 19.6667 4.16667 19.6667Z"
-                      stroke="#8D8D8D"
+                      stroke="#3BB98E"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
@@ -580,13 +1284,17 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-xl font-semibold leading-7">
+                  <h3
+                    class="card-heading text-lg xl:text-xl font-semibold leading-7"
+                  >
                     Keep Close Tabs
                   </h3>
                 </div>
               </div>
               <div>
-                <p class="text-base font-medium leading-normal">
+                <p
+                  class="card-desc text-sm xl:text-base font-medium leading-normal"
+                >
                   No more Googling an answer. Track the screen the test taker is
                   on and even record screenshots.
                 </p>
@@ -594,11 +1302,13 @@
             </div>
             <div
               id="card-pool"
-              class="hiw-card text-neutral-400 p-5 flex flex-col gap-3 bg-stone-50 border-opacity"
+              class="asmt-feature-card text-neutral-400 p-5 rounded-b-3xl flex flex-col gap-3 bg-stone-50 border-l-emerald-400"
+              data-card-index="6"
             >
               <div class="flex items-center gap-3">
                 <div>
                   <svg
+                    class="card-icon grayscale"
                     xmlns="http://www.w3.org/2000/svg"
                     width="29"
                     height="28"
@@ -609,7 +1319,7 @@
                       <path
                         id="Vector"
                         d="M23.696 14.0001C23.696 12.5627 23.6424 11.1382 23.535 9.72772C23.4525 8.61022 22.9712 7.55958 22.1789 6.76724C21.3865 5.9749 20.3359 5.4936 19.2184 5.41105C16.3742 5.19648 13.5179 5.19648 10.6737 5.41105C9.55622 5.4936 8.50557 5.9749 7.71323 6.76724C6.92089 7.55958 6.43959 8.61022 6.35704 9.72772C6.33721 9.98439 6.31971 10.2422 6.30338 10.5001M23.696 14.0001L27.196 10.5001M23.696 14.0001L20.196 10.5001M6.19604 14.0001C6.19604 15.4374 6.24971 16.8619 6.35704 18.2724C6.43959 19.3899 6.92089 20.4405 7.71323 21.2329C8.50557 22.0252 9.55622 22.5065 10.6737 22.5891C13.5179 22.8037 16.3742 22.8037 19.2184 22.5891C20.3359 22.5065 21.3865 22.0252 22.1789 21.2329C22.9712 20.4405 23.4525 19.3899 23.535 18.2724C23.5549 18.0157 23.5724 17.7579 23.5887 17.5001M6.19604 14.0001L9.69604 17.5001M6.19604 14.0001L2.69604 17.5001"
-                        stroke="#8D8D8D"
+                        stroke="#3BB98E"
                         stroke-width="2"
                         stroke-linecap="round"
                         stroke-linejoin="round"
@@ -628,13 +1338,17 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-xl font-semibold leading-7">
+                  <h3
+                    class="card-heading text-lg xl:text-xl font-semibold leading-7"
+                  >
                     Pool You Can't Fool
                   </h3>
                 </div>
               </div>
               <div>
-                <p class="text-base font-medium leading-normal">
+                <p
+                  class="card-desc text-sm xl:text-base font-medium leading-normal"
+                >
                   Conducting a test with many simultaneous users? Group
                   similar-looking questions into a pool.
                 </p>
@@ -643,7 +1357,7 @@
           </div>
           <div
             id="cards-output"
-            class="max-h-[911px] relative p-11 pt-10 col-span-9 rounded-tr-3xl rounded-br-3xl border border-gray-200 font-['Lato']"
+            class="relative h-full overflow-y-auto p-11 pt-10 col-span-9 rounded-tr-3xl rounded-br-3xl border border-gray-200 font-['Lato']"
           >
             <div class="absolute top-5 right-5 flex gap-2">
               <svg
@@ -755,14 +1469,19 @@
                 class="max-w-3xl flex flex-col gap-3 text-neutral-500 text-base font-normal leading-normal"
               >
                 <span
-                  >Online questions leak to other users. With this feature, you
-                  can upload a question template and different users will see
-                  different variants of the question.</span
+                  >Online questions
+                  <strong class="text-gray-700">leak</strong> to other users.
+                  With this feature, you can upload a question template and
+                  different users will see different variants of the
+                  question.</span
                 >
                 <span
-                  >The image shows how a question like What is x+y? will show
-                  different values of x and y each time the question loads. Try
-                  closing and reopening this card.</span
+                  >The image shows how a question like
+                  <strong class="text-gray-700">What is x+y?</strong> will show
+                  different values of
+                  <strong class="text-gray-700">x</strong> and
+                  <strong class="text-gray-700">y</strong> each time the
+                  question loads. Try closing and reopening this card.</span
                 >
               </p>
               <div>
@@ -830,9 +1549,12 @@
                 class="max-w-3xl flex flex-col gap-3 text-neutral-500 text-base font-normal leading-normal"
               >
                 <span
-                  >The questions in a Question Pool are almost indistinguishable
-                  from one another. So, different users co-ordinating on a test
-                  is futile.</span
+                  >The questions in a Question Pool are
+                  <strong class="text-gray-700"
+                    >almost indistinguishable</strong
+                  >
+                  from one another. So, different users <i>co-ordinating</i> on
+                  a test is futile.</span
                 >
                 <span
                   >Close this card and reopen it to see a new question.</span
@@ -890,13 +1612,7 @@
                 alt="codingal logo"
               />
             </div>
-            <!-- <div class="company px-[5px] py-4 flex justify-center items-center">
-              <img
-                class="w-[136.71px] h-[37.45px]"
-                src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/codingal.png"
-                alt="codingal logo"
-              />
-            </div> -->
+
             <div class="company flex justify-center items-center">
               <img
                 class="w-[142.80px] h-[35.17px] sm:w-20 sm:h-8 lg:w-32 xl:w-[142.80px]xlg:h-[35.17px]"
@@ -904,13 +1620,7 @@
                 alt="treebo logo"
               />
             </div>
-            <!-- <div class="company px-2">
-              <img
-                class="w-[142.80px] h-[35.17px]"
-                src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/treebo.png"
-                alt="treebo logo"
-              />
-            </div> -->
+
             <div class="company flex justify-center items-center">
               <img
                 class="w-[164.93px] h-[36.08px] sm:w-20 sm:h-8 lg:w-32 xl:w-[164.93px]xlg:h-[36.08px]"
@@ -918,13 +1628,7 @@
                 alt="shadowfax logo"
               />
             </div>
-            <!-- <div class="company px-[5px]">
-              <img
-                class="w-[164.93px] h-[36.08px]"
-                src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/shadowfax.png"
-                alt="shadowfax logo"
-              />
-            </div> -->
+
             <div class="company flex justify-center items-center">
               <img
                 class="w-[95.57px] h-[40.96px] sm:w-20 sm:h-8 lg:w-28 xl:w-[95.57px] xl:h-[40.96px]"
@@ -939,13 +1643,7 @@
                 alt="practo logo"
               />
             </div>
-            <!-- <div class="company px-4">
-              <img
-                class="w-[103.71px] h-[27.78px]"
-                src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/practo.png"
-                alt="practo logo"
-              />
-            </div> -->
+
             <div class="company flex justify-center items-center">
               <img
                 class="w-[95.87px] h-[30.93px] sm:w-20 sm:h-8 lg:w-28 xl:w-[95.87px] xl:h-[30.93px]"
@@ -953,13 +1651,6 @@
                 alt="1point1 logo"
               />
             </div>
-            <!-- <div class="company px-5">
-              <img
-                class="w-[95.87px] h-[30.93px]"
-                src="https://cdn-media-assets.socratease.co/equip/product/img/client-logos/1point1.png"
-                alt="1point1 logo"
-              />
-            </div> -->
           </div>
         </div>
       </section>
