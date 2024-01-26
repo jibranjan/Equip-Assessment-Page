@@ -3,7 +3,7 @@ let activeCardMobId = "card-mob-gab";
 
 let cardMobElArray = document.querySelectorAll(".asmt-feature-mob-card");
 cardMobElArray.forEach(function (cardMobEl) {
-  cardMobEl.addEventListener("mouseover", function () {
+  cardMobEl.addEventListener("click", function () {
     let cardMobElId = cardMobEl.getAttribute("id");
     if (activeCardMobId !== cardMobElId) {
       makePrevCardMobInActive(activeCardMobId);
@@ -57,7 +57,7 @@ let activeCardIndex = 0;
 let cardElArray = document.querySelectorAll(".asmt-feature-card");
 
 cardElArray.forEach(function (cardEl) {
-  cardEl.addEventListener("mouseover", function () {
+  cardEl.addEventListener("click", function () {
     let cardElId = cardEl.getAttribute("id");
     let activeCardId = cardElArray[activeCardIndex].getAttribute("id");
     if (activeCardId !== cardElId) {
@@ -65,6 +65,7 @@ cardElArray.forEach(function (cardEl) {
       makeNextCardActive(cardElId);
       changeIframe(activeCardId, cardElId);
       activeCardIndex = parseInt(cardEl.dataset.cardIndex);
+      handleNavButtons(activeCardIndex);
     }
   });
 });
@@ -119,31 +120,42 @@ function changeIframe(previousActiveCardId, nextActiveCardId) {
 let chevronRightEl = document.getElementById("chevron-right");
 
 chevronRightEl.addEventListener("click", function () {
-  let activeCardId = cardElArray[activeCardIndex].getAttribute("id");
-  let cardElId;
-  if (activeCardIndex == 6) {
-    cardElId = cardElArray[0].getAttribute("id");
-  } else {
-    cardElId = cardElArray[activeCardIndex + 1].getAttribute("id");
+  if (activeCardIndex < 6) {
+    let activeCardId = cardElArray[activeCardIndex].getAttribute("id");
+    let cardElId = cardElArray[activeCardIndex + 1].getAttribute("id");
+    makePrevCardInActive(activeCardId);
+    makeNextCardActive(cardElId);
+    changeIframe(activeCardId, cardElId);
+    activeCardIndex = activeCardIndex + 1;
+    handleNavButtons(activeCardIndex);
   }
-  makePrevCardInActive(activeCardId);
-  makeNextCardActive(cardElId);
-  changeIframe(activeCardId, cardElId);
-  activeCardIndex = activeCardIndex == 6 ? 0 : parseInt(activeCardIndex) + 1;
 });
 
 let chevronLeftEl = document.getElementById("chevron-left");
 
 chevronLeftEl.addEventListener("click", function () {
-  let activeCardId = cardElArray[activeCardIndex].getAttribute("id");
-  let cardElId;
-  if (activeCardIndex == 0) {
-    cardElId = cardElArray[6].getAttribute("id");
-  } else {
-    cardElId = cardElArray[activeCardIndex - 1].getAttribute("id");
+  if (activeCardIndex > 0) {
+    let activeCardId = cardElArray[activeCardIndex].getAttribute("id");
+    let cardElId = cardElArray[activeCardIndex - 1].getAttribute("id");
+    makePrevCardInActive(activeCardId);
+    makeNextCardActive(cardElId);
+    changeIframe(activeCardId, cardElId);
+    activeCardIndex = activeCardIndex - 1;
+    handleNavButtons(activeCardIndex);
   }
-  makePrevCardInActive(activeCardId);
-  makeNextCardActive(cardElId);
-  changeIframe(activeCardId, cardElId);
-  activeCardIndex = activeCardIndex == 0 ? 6 : parseInt(activeCardIndex) - 1;
 });
+
+function handleNavButtons(nextIndex) {
+  if (nextIndex == 0) {
+    chevronLeftEl.classList.add("opacity-50", "cursor-not-allowed");
+    chevronRightEl.classList.remove("opacity-50", "cursor-not-allowed");
+  }
+  if (nextIndex > 0 && nextIndex < 6) {
+    chevronLeftEl.classList.remove("opacity-50", "cursor-not-allowed");
+    chevronRightEl.classList.remove("opacity-50", "cursor-not-allowed");
+  }
+  if (nextIndex == 6) {
+    chevronRightEl.classList.add("opacity-50", "cursor-not-allowed");
+    chevronLeftEl.classList.remove("opacity-50", "cursor-not-allowed");
+  }
+}
