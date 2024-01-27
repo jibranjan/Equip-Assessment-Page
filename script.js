@@ -70,6 +70,7 @@ function handleNavButtons(nextIndex) {
   }
   if (nextIndex > 0 && nextIndex < cardElArray.length - 1) {
     chevronLeftEl.classList.remove("opacity-50", "cursor-not-allowed");
+    chevronLeftEl.classList.add("cursor-pointer");
     chevronRightEl.classList.remove("opacity-50", "cursor-not-allowed");
   }
   if (nextIndex == cardElArray.length - 1) {
