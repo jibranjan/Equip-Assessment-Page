@@ -139,5 +139,9 @@ function changeIframe(previousActiveCardId, nextActiveCardId) {
   previousActiveOutputEl.classList.add("hidden");
   let nextActiveOutputId = nextActiveCardId + "-output";
   let nextActiveOutputEl = document.getElementById(nextActiveOutputId);
+  let iFrameEl = nextActiveOutputEl.querySelector("iframe");
+  if (iFrameEl.getAttribute("src") == "") {
+    iFrameEl.setAttribute("src", iFrameEl.dataset.src);
+  }
   nextActiveOutputEl.classList.remove("hidden");
 }
