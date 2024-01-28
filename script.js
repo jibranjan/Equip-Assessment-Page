@@ -63,6 +63,14 @@ chevronLeftEl.addEventListener("click", function () {
   }
 });
 
+let iFrameEl = document.querySelectorAll(".asmt-features-iframe");
+
+iFrameEl.forEach(function (iFrame) {
+  iFrame.addEventListener("load", (e) => {
+    onIframeLoaded(e);
+  });
+});
+
 function handleNavButtons(nextIndex) {
   if (nextIndex == 0) {
     chevronLeftEl.classList.add("opacity-50", "cursor-not-allowed");
